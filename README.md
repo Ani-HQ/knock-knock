@@ -46,7 +46,7 @@ node bin/knockknock.js deny ada 424242424242   # cooldown-mute the sender
 | harness  | detect                        | approve                          |
 |----------|-------------------------------|----------------------------------|
 | hermes   | yes (reject log, out of box)  | yes (.env allowlist + restart)   |
-| openclaw | v1.1 (needs ingress debug on) | yes (openclaw config patch)      |
+| openclaw | yes (needs gateway log level: debug) | yes (openclaw config patch)  |
 
 ## security model
 

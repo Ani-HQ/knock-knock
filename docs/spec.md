@@ -41,9 +41,13 @@ single node 22 ESM daemon, zero runtime deps. modules:
   from `~/.hermes-<agent>/logs/agent.log` (or journald unit). approve: add id to
   `TELEGRAM_ALLOWED_USERS` in the agent home `.env`, `systemctl --user restart <unit>`.
 - `adapters/openclaw.js` — approve: `openclaw config patch` (validated write) on
-  account allowFrom/groupAllowFrom + `openclaw gateway restart`. detect: requires
-  `OPENCLAW_DEBUG_TELEGRAM_INGRESS=1` (openclaw drops group rejects pre-log by
-  default); detection parsing lands in v1.1 once the debug format is spiked.
+  account allowFrom/groupAllowFrom + `openclaw gateway restart`. detect: parses
+  `Blocked telegram (group message from|group sender|direct sender) <id>` out of
+  the gateway's JSON file log (daily-rotated, {file, offset} cursor). requires
+  file log level debug (`openclaw config set logging.level debug`) — openclaw
+  only logs rejects through logVerbose; spiked against 2026.6.5 source. the
+  file log has no account attribution, so knocks credit the configured agent
+  (unambiguous with one public telegram account; caveat documented).
 
 ## config
 

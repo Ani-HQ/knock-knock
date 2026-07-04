@@ -15,8 +15,9 @@ yes. they're in.
 - hermes adapter: detect rejected senders from gateway logs (cursor-based,
   rotation-safe), approve via `TELEGRAM_ALLOWED_USERS` .env edit (with backup)
   + gateway unit restart
-- openclaw adapter: approve via validated `openclaw config patch` + gateway
-  restart (detection planned for 0.2 behind `OPENCLAW_DEBUG_TELEGRAM_INGRESS`)
+- openclaw adapter: detect rejected senders from the gateway file log
+  (requires `openclaw config set logging.level debug`; handles daily
+  rotation), approve via validated `openclaw config patch` + gateway restart
 - scan daemon (60s) with per-sender cooldown so repeat knocks can't spam
 - telegram notifications: dedicated-bot mode with inline approve/deny buttons,
   or degraded mode via the pinged agent's own bot with a copy-paste command
