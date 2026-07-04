@@ -55,6 +55,18 @@ owner's explicit tap or command. callbacks from anyone but the owner are
 ignored. sender ids are validated numeric before touching any config. display
 names are treated as untrusted input. secrets stay in your gitignored config.
 
+## releasing
+
+versions are git tags. to cut a release: add a section to `CHANGELOG.md`,
+bump `version` in `package.json`, then
+
+```bash
+git tag v0.x.y && git push origin v0.x.y
+```
+
+CI runs the tests and publishes a GitHub Release with the changelog section
+as notes.
+
 ## license
 
 MIT
