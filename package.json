@@ -1,6 +1,6 @@
 {
   "name": "knockknock-agent",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "someone tagged your agent. your agent asked you. you tapped yes. they're in.",
   "type": "module",
   "bin": { "knockknock": "bin/knockknock.js" },
