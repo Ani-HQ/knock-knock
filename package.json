@@ -1,0 +1,13 @@
+{
+  "name": "knockknock-agent",
+  "version": "0.1.0",
+  "description": "someone tagged your agent. your agent asked you. you tapped yes. they're in.",
+  "type": "module",
+  "bin": { "knockknock": "bin/knockknock.js" },
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "license": "MIT",
+  "repository": "github:anianroid/knockknock"
+}
