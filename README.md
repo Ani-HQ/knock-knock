@@ -18,7 +18,7 @@ the gateways already read.
 ## quickstart
 
 ```bash
-git clone https://github.com/anianroid/knockknock && cd knockknock
+git clone https://github.com/Ani-HQ/knock-knock && cd knockknock
 cp examples/config.example.json ~/.config/knockknock/config.json
 # edit: your telegram id, your agents
 node bin/knockknock.js status     # sanity check

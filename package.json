@@ -9,5 +9,5 @@
     "test": "node --test test/*.test.js"
   },
   "license": "MIT",
-  "repository": "github:anianroid/knockknock"
+  "repository": "github:Ani-HQ/knock-knock"
 }
