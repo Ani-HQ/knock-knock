@@ -1,0 +1,25 @@
+{
+  "ownerId": "123456789",
+  "bot": {
+    "token": ""
+  },
+  "llm": {
+    "baseUrl": "",
+    "apiKey": "",
+    "model": ""
+  },
+  "cooldownHours": 6,
+  "agents": {
+    "ada": {
+      "harness": "hermes",
+      "home": "~/.hermes-ada",
+      "unit": "hermes-ada-gateway.service",
+      "botTokenEnv": "TELEGRAM_BOT_TOKEN"
+    },
+    "hal": {
+      "harness": "openclaw",
+      "account": "hal",
+      "scope": "group+dm"
+    }
+  }
+}
